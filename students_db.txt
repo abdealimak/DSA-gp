@@ -1,0 +1,13 @@
+101,Alice Smith,85,90,78,92,88
+102,Bob Johnson,35,40,38,42,30
+103,Charlie Brown,95,98,92,94,96
+104,Diana Prince,70,65,80,75,72
+105,Ethan Hunt,20,25,30,15,40
+106,Fiona Gallagher,88,84,90,82,85
+107,George Miller,45,50,48,52,49
+108,Hannah Abbott,60,62,58,65,61
+109,Ian Wright,30,32,25,28,35
+110,Jenny Kim,99,97,100,98,99
+111,Alice Smith,60,60,60,60,60
+112,Test Equal,50,50,50,50,50
+113,Test Equal2,50,50,50,50,50
