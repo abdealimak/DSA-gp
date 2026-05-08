@@ -1,4 +1,4 @@
-# 📊 College Marks Ranker (DSA Project)
+# 📊 College Marks Ranker
 
 ---
 
