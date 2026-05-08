@@ -1,226 +1,206 @@
 # 📊 College Marks Ranker (DSA Project)
 
-## 👥 Team Members
+---
 
-* **P1:** Aayush Dattatray Jadhav
-* **P2:** Yatharth Mishra
-* **P3:** Abdeali Makda
-* **P4:** Rutuja Lokhande
+## 👥 Team Members & Contributions
+
+| Member                      | Role                                                          |
+| --------------------------- | ------------------------------------------------------------- |
+| **Aayush Dattatray Jadhav** | Student Input, Linear Search, Fail-Risk Detection             |
+| **Yatharth Mishra**         | Bubble Sort, Selection Sort, Step Counting                    |
+| **Abdeali Makda**           | Base System Design, File Handling, Insertion Sort, Merge Sort |
+| **Rutuja Lokhande**         | Quick Sort, Binary Search, Comparison Report                  |
 
 ---
 
-## 📌 Project Overview
+## 📌 Problem Statement
 
-The **College Marks Ranker** is a Data Structures and Algorithms (DSA) project designed to simulate a real-world academic system.
+A degree college needs a system to:
 
-The system performs:
+* Rank students based on marks
+* Identify toppers
+* Detect fail-risk students
+* Compare 5 sorting algorithms on real data
 
-* Student data management
-* Searching operations
-* Sorting using multiple algorithms
-* Performance comparison of algorithms
+Each sorting algorithm must display:
 
-The main objective is to **analyze and compare 5 sorting algorithms** based on:
-
-* Number of steps (operations)
+* Step count
 * Execution time
 
 ---
 
-## 🎯 Objectives
+## 🎯 Project Objective
 
-* Implement and understand different **sorting algorithms**
-* Apply **searching techniques**
-* Compare algorithm efficiency using real data
-* Build a structured and modular program
+* Apply **Data Structures & Algorithms** in a real-world scenario
+* Compare efficiency of multiple sorting techniques
+* Implement searching methods
+* Build a modular and scalable system
 
 ---
 
-## 🧾 Features
+## ⚙️ Core Features
 
 ### 1. Student Record Management
 
-Each student record contains:
+* Stores:
 
-* Roll Number
-* Name
-* Marks in 5 subjects
-* Average Marks
-
----
-
-### 2. Searching Operations
-
-#### 🔍 Linear Search (P1)
-
-* Search student by **roll number**
-* Time Complexity: O(n)
-
-#### 🔎 Binary Search (P4)
-
-* Search student by **name**
-* Requires data to be **sorted first**
-* Time Complexity: O(log n)
+  * Roll Number
+  * Name
+  * Marks (5 subjects)
+  * Average marks
 
 ---
 
-### 3. Sorting Algorithms (Core DSA)
+### 2. Searching Algorithms
 
-Students are sorted based on **average marks** using:
+#### 🔍 Linear Search
 
-| Algorithm      | Implemented By |
-| -------------- | -------------- |
-| Bubble Sort    | P2             |
-| Selection Sort | P2             |
-| Insertion Sort | P3             |
-| Merge Sort     | P3             |
-| Quick Sort     | P4             |
+* Search student by roll number
+* Time Complexity: **O(n)**
 
-Each algorithm:
+#### 🔎 Binary Search
 
-* Sorts student records
-* Counts number of steps (comparisons)
-* Measures execution time
+* Search student by name
+* Requires sorted data
+* Time Complexity: **O(log n)**
 
 ---
 
-### 4. Algorithm Comparison
+### 3. Sorting Algorithms (Key Feature)
 
-A comparison table is generated showing:
+Sorting is done based on **average marks**
+
+| Algorithm      | Complexity |
+| -------------- | ---------- |
+| Bubble Sort    | O(n²)      |
+| Selection Sort | O(n²)      |
+| Insertion Sort | O(n²)      |
+| Merge Sort     | O(n log n) |
+| Quick Sort     | O(n log n) |
+
+---
+
+### 4. Step Count Tracking
+
+* Each algorithm counts:
+
+  * Comparisons
+  * Swaps (partially)
+* Used to compare efficiency
+
+---
+
+### 5. Performance Comparison
+
+Displays table:
 
 | Algorithm | Steps | Time |
 | --------- | ----- | ---- |
 
-This helps analyze:
+Helps analyze:
 
-* Efficiency
-* Performance differences
+* Fastest algorithm
+* Most efficient algorithm
 
 ---
 
-### 5. Fail-Risk Detection (P1)
+### 6. Fail-Risk Detection
 
 * Identifies students with:
 
   **Average < 40**
 
-* Uses O(n) traversal
+* Uses linear scan → O(n)
 
 ---
 
-### 6. Menu-Driven Interface
+## ⭐ Custom Features
 
-The program provides options such as:
+### 📊 Class Analytics
 
-* Search student
-* Display records
-* Sort and compare algorithms
-* Identify fail-risk students
+* Calculates overall class average
+* Displays top-performing student
 
 ---
 
-## ⚙️ Implementation Details
+### 💾 File Storage System
 
-### 🔹 Data Structure Used
+* Saves student data in `.txt` file
+* Loads data on program start
+* Ensures persistence
 
-* `struct Student` to store student details
+---
 
-### 🔹 Key Concepts Applied
+## 🧠 Concepts Used
 
 * Arrays
+* Structures (`struct`)
 * Searching Algorithms
 * Sorting Algorithms
 * Time Complexity Analysis
-* Step Counting Mechanism
+* File Handling
+* Step Counting
 
 ---
 
-## 🧠 Step Counting Strategy
+## 📁 File Structure
 
-* Each comparison in sorting algorithms increments a counter
-* Used to compare algorithm efficiency
-* Ensures fair analysis across all methods
-
----
-
-## ⚠️ Important Constraints
-
-* Maximum students: 20
-* All sorting must be done on **copied data** (to ensure fairness)
-* Binary search must be applied only after sorting by name
-
----
-
-## 🧩 Custom Features (Extended Functionality)
-
-* 🎯 Find Topper (highest average)
-* 📈 Class Average Calculation
-
----
-
-## 👨‍💻 Role Distribution
-
-### 👤 P1 – Aayush Dattatray Jadhav
-
-* Student input & structure handling
-* Linear Search implementation
-* Fail-risk student detection
-
----
-
-### 👤 P2 – Yatharth Mishra
-
-* Bubble Sort implementation
-* Selection Sort implementation
-* Step counting logic
-
----
-
-### 👤 P3 – Abdeali Makda
-
-* Insertion Sort implementation
-* Merge Sort implementation
-* Step counting logic
-
----
-
-### 👤 P4 – Rutuja Lokhande
-
-* Quick Sort implementation
-* Binary Search implementation
-* Algorithm comparison report
+```
+CollegeMarksRanker/
+│
+├── main.cpp            # Main program (all logic)
+├── students_db.txt     # Stored student records
+└── README.md           # Project documentation
+```
 
 ---
 
 ## 🚀 How to Run
 
-1. Compile the program:
+### Compile:
 
 ```
 g++ main.cpp -o ranker
 ```
 
-2. Run the executable:
+### Run:
 
 ```
 ./ranker
 ```
 
-3. Follow on-screen menu instructions
+---
+
+## 📋 Program Flow
+
+1. Load data from file
+2. Display menu
+3. Perform selected operation
+4. Save updated data
+5. Exit
+
+---
+
+## ⚠️ Important Notes
+
+* Maximum students: **20**
+* Sorting is done on **copied arrays** for fairness
+* Binary search only works after sorting
+* Step count may vary slightly per algorithm
 
 ---
 
 ## 📊 Learning Outcomes
 
-* Practical understanding of sorting algorithms
-* Real-world application of searching techniques
-* Performance comparison using step count and execution time
-* Team-based modular programming
+* Understanding real-world use of sorting
+* Comparing algorithm efficiency
+* Implementing search techniques
+* Working in a team-based coding environment
 
 ---
 
 ## 📌 Conclusion
 
-This project demonstrates how fundamental DSA concepts can be applied to build a real-world system. By comparing multiple algorithms, it highlights the importance of choosing efficient solutions based on data size and requirements.
+This project demonstrates how fundamental DSA concepts can be used to build a practical system. It highlights the importance of choosing efficient algorithms and provides hands-on experience with real data processing.
 
 ---
