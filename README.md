@@ -1,4 +1,4 @@
-# 🏫📊 College Marks Ranker
+# 🏫 College Marks Ranker 📊
 
 ---
 
